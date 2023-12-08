@@ -1,6 +1,8 @@
 package menu.controller
 
 import menu.misc.ExceptionHandler
+import menu.model.Coaches
+import menu.model.Menus
 import menu.view.InputView
 import menu.view.OutputView
 
@@ -13,17 +15,28 @@ class MainController(
     fun run() {
         printHello()
 
+        receiveCoaches()
 
     }
 
     private fun printHello() = outputView.outputHello()
 
-    private fun receiveCoachesName() {
-        outputView.outputCoachesName()
+    private fun receiveCoaches() {
+        val coaches: Coaches = exceptionHandler.inputUntilSuccess { receiveCoachesName() }
+        repeat(coaches.getSize()) {
+            val hateMenus: Menus = exceptionHandler.inputUntilSuccess { receiveCoachHateMenu() }
+            coaches.addCoachHateMenus(it, hateMenus)
+        }
     }
 
-    private fun receiveCoachInvalidMenu() {
+    private fun receiveCoachesName(): Coaches {
+        outputView.outputCoachesName()
+        return Coaches(inputView.inputString())
+    }
+
+    private fun receiveCoachHateMenu(): Menus {
         outputView.outputCoachHateMenu()
+        return Menus(inputView.inputString())
     }
 
     private fun printRecommendedMenu() {
