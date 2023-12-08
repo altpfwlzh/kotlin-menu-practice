@@ -1,7 +1,7 @@
 package menu.model
 
 abstract class CoachMenus {
-    abstract val menus: Menus
+    abstract val menus: HateMenus
 
     init {
 

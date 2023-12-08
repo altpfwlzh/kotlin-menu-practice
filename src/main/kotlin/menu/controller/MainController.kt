@@ -2,7 +2,7 @@ package menu.controller
 
 import menu.misc.ExceptionHandler
 import menu.model.Coaches
-import menu.model.Menus
+import menu.model.HateMenus
 import menu.view.InputView
 import menu.view.OutputView
 
@@ -24,7 +24,7 @@ class MainController(
     private fun receiveCoaches() {
         val coaches: Coaches = exceptionHandler.inputUntilSuccess { receiveCoachesName() }
         repeat(coaches.getSize()) {
-            val hateMenus: Menus = exceptionHandler.inputUntilSuccess { receiveCoachHateMenu() }
+            val hateMenus: HateMenus = exceptionHandler.inputUntilSuccess { receiveCoachHateMenu() }
             coaches.addCoachHateMenus(it, hateMenus)
         }
     }
@@ -34,9 +34,9 @@ class MainController(
         return Coaches(inputView.inputString())
     }
 
-    private fun receiveCoachHateMenu(): Menus {
+    private fun receiveCoachHateMenu(): HateMenus {
         outputView.outputCoachHateMenu()
-        return Menus(inputView.inputString())
+        return HateMenus(inputView.inputString())
     }
 
     private fun printRecommendedMenu() {
