@@ -7,22 +7,22 @@ class OutputView() {
     private val strings: Strings = Strings
     private val errorMessage: ErrorMessage = ErrorMessage
 
-    fun printHello() = println(strings.OUTPUT_HELLO)
+    fun outputHello() = println(strings.OUTPUT_HELLO)
 
-    fun printCoachesName() = println(strings.OUTPUT_COACHES_NAME)
+    fun outputCoachesName() = println(strings.OUTPUT_COACHES_NAME)
 
-    fun printCoachInvalidMenu() = println(strings.OUTPUT_COACH_INVALID_MENU)
+    fun outputCoachInvalidMenu() = println(strings.OUTPUT_COACH_INVALID_MENU)
 
-    fun printRecommendedMenu() = println(strings.OUTPUT_RECOMMENDED_MENUS)
+    fun outputRecommendedMenu() = println(strings.OUTPUT_RECOMMENDED_MENUS)
 
-    fun printRecommendedDays() = println(strings.OUTPUT_RECOMMENDED_DAYS)
+    fun outputRecommendedDays() = println(strings.OUTPUT_RECOMMENDED_DAYS)
 
-    fun printRecommendedCategories() = println(strings.OUTPUT_RECOMMENDED_CATEGORIES)
+    fun outputRecommendedCategories() = println(strings.OUTPUT_RECOMMENDED_CATEGORIES)
 
-    fun printCoachRecommendedMenus() = println(strings.OUTPUT_COACH_RECOMMENDED_MENUS)
+    fun outputCoachRecommendedMenus() = println(strings.OUTPUT_COACH_RECOMMENDED_MENUS)
 
-    fun printBye() = println(strings.OUTPUT_BYE)
+    fun outputBye() = println(strings.OUTPUT_BYE)
 
-    private fun printBlankLine() = println()
+    private fun outputBlankLine() = println()
 
 }

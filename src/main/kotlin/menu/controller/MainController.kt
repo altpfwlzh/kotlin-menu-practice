@@ -1,7 +1,6 @@
 package menu.controller
 
 import menu.misc.ExceptionHandler
-import menu.model.Model
 import menu.view.InputView
 import menu.view.OutputView
 
@@ -12,7 +11,30 @@ class MainController(
 ) {
 
     fun run() {
-        exceptionHandler.inputUntilSuccess { Model(inputView.inputInt()) }
+        printHello()
+
+
+    }
+
+    private fun printHello() = outputView.outputHello()
+
+    private fun receiveCoachesName() {
+        outputView.outputCoachesName()
+    }
+
+    private fun receiveCoachInvalidMenu() {
+        outputView.outputCoachInvalidMenu()
+    }
+
+    private fun printRecommendedMenu() {
+        outputView.outputRecommendedMenu()
+        outputView.outputRecommendedDays()
+        outputView.outputRecommendedCategories()
+        outputView.outputCoachRecommendedMenus()
+    }
+
+    private fun printBye() {
+        outputView.outputBye()
     }
 
 }
