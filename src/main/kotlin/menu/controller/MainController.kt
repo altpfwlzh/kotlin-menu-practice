@@ -23,7 +23,7 @@ class MainController(
     }
 
     private fun receiveCoachInvalidMenu() {
-        outputView.outputCoachInvalidMenu()
+        outputView.outputCoachHateMenu()
     }
 
     private fun printRecommendedMenu() {

@@ -11,7 +11,7 @@ class OutputView() {
 
     fun outputCoachesName() = println(strings.OUTPUT_COACHES_NAME)
 
-    fun outputCoachInvalidMenu() = println(strings.OUTPUT_COACH_INVALID_MENU)
+    fun outputCoachHateMenu() = println(strings.OUTPUT_COACH_HATE_MENU)
 
     fun outputRecommendedMenu() = println(strings.OUTPUT_RECOMMENDED_MENUS)
 
